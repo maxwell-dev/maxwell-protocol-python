@@ -17,7 +17,7 @@ setuptools.setup(
     description="The maxwell protocol implementation for python.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://bitbros.com/maxwell-protocol-python",
+    url="https://github.com/maxwell-dev/maxwell-protocol-python",
     packages=setuptools.find_packages(),
     install_requires=requirements,
     classifiers=(
