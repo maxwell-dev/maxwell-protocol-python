@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='maxwell_protocol.proto',
   package='maxwell.protocol',
   syntax='proto3',
-  serialized_pb=_b('\n\x16maxwell_protocol.proto\x12\x10maxwell.protocol\"\x19\n\nping_req_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"\x19\n\nping_rep_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"G\n\npull_req_t\x12\r\n\x05topic\x18\x01 \x01(\t\x12\x0e\n\x06offset\x18\x02 \x01(\x03\x12\r\n\x05limit\x18\x03 \x01(\r\x12\x0b\n\x03ref\x18\x0f \x01(\r\"@\n\npull_rep_t\x12%\n\x04msgs\x18\x01 \x03(\x0b\x32\x17.maxwell.protocol.msg_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"7\n\npush_req_t\x12\r\n\x05topic\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x0c\x12\x0b\n\x03ref\x18\x0f \x01(\r\"\x19\n\npush_rep_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"\x96\x01\n\x08\x64o_req_t\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\x12\x16\n\x0esource_enabled\x18\r \x01(\x08\x12*\n\x06source\x18\x0e \x01(\x0b\x32\x1a.maxwell.protocol.source_t\x12)\n\x06traces\x18\x0f \x03(\x0b\x32\x19.maxwell.protocol.trace_t\"D\n\x08\x64o_rep_t\x12\r\n\x05value\x18\x01 \x01(\t\x12)\n\x06traces\x18\x0f \x03(\x0b\x32\x19.maxwell.protocol.trace_t\"\x88\x01\n\tdo2_req_t\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\x16\n\x0esource_enabled\x18\r \x01(\x08\x12*\n\x06source\x18\x0e \x01(\x0b\x32\x1a.maxwell.protocol.source_t\x12)\n\x06traces\x18\x0f \x03(\x0b\x32\x19.maxwell.protocol.trace_t\"E\n\tdo2_rep_t\x12\r\n\x05value\x18\x01 \x01(\x0c\x12)\n\x06traces\x18\x0f \x03(\x0b\x32\x19.maxwell.protocol.trace_t\"(\n\nauth_req_t\x12\r\n\x05token\x18\x01 \x01(\t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"\x19\n\nauth_rep_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"\x17\n\x08ok_rep_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"6\n\x0b\x65rror_rep_t\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0c\n\x04\x64\x65sc\x18\x02 \x01(\t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"6\n\tok2_rep_t\x12)\n\x06traces\x18\x0f \x03(\x0b\x32\x19.maxwell.protocol.trace_t\"U\n\x0c\x65rror2_rep_t\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0c\n\x04\x64\x65sc\x18\x02 \x01(\t\x12)\n\x06traces\x18\x0f \x03(\x0b\x32\x19.maxwell.protocol.trace_t\"(\n\x0bwatch_req_t\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"\x1a\n\x0bwatch_rep_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"*\n\runwatch_req_t\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"\x1c\n\runwatch_rep_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"8\n\x17register_frontend_req_t\x12\x10\n\x08\x65ndpoint\x18\x01 \x01(\t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"&\n\x17register_frontend_rep_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\",\n\x0f\x61\x64\x64_route_req_t\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"\x1e\n\x0f\x61\x64\x64_route_rep_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"/\n\x12\x64\x65lete_route_req_t\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"!\n\x12\x64\x65lete_route_rep_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"0\n\x0f\x61\x64\x64_route_msg_t\x12\x10\n\x08\x65ndpoint\x18\x01 \x01(\t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"A\n\x12\x64\x65lete_route_msg_t\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\x10\n\x08\x65ndpoint\x18\x02 \x01(\t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"/\n\x11push_routes_req_t\x12\r\n\x05types\x18\x01 \x03(\t\x12\x0b\n\x03ref\x18\x0f \x01(\r\" \n\x11push_routes_rep_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\" \n\x11pull_routes_req_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"W\n\x11pull_routes_rep_t\x12\x35\n\x0croute_groups\x18\x01 \x03(\x0b\x32\x1f.maxwell.protocol.route_group_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"2\n\x13\x64\x65lete_topics_req_t\x12\x0e\n\x06topics\x18\x01 \x03(\t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"\"\n\x13\x64\x65lete_topics_rep_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"7\n\x16register_backend_req_t\x12\x10\n\x08\x65ndpoint\x18\x01 \x01(\t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"%\n\x16register_backend_rep_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"%\n\x16resolve_frontend_req_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"7\n\x16resolve_frontend_rep_t\x12\x10\n\x08\x65ndpoint\x18\x01 \x01(\t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"3\n\x15resolve_backend_req_t\x12\r\n\x05topic\x18\x01 \x01(\t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"6\n\x15resolve_backend_rep_t\x12\x10\n\x08\x65ndpoint\x18\x01 \x01(\t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"9\n\x05msg_t\x12\x0e\n\x06offset\x18\x01 \x01(\x04\x12\r\n\x05value\x18\x02 \x01(\x0c\x12\x11\n\ttimestamp\x18\x03 \x01(\x04\"+\n\x08source_t\x12\r\n\x05\x61gent\x18\x01 \x01(\t\x12\x10\n\x08\x65ndpoint\x18\x02 \x01(\t\";\n\x07trace_t\x12\x0b\n\x03ref\x18\x01 \x01(\r\x12\x12\n\nhandler_id\x18\x02 \x01(\r\x12\x0f\n\x07node_id\x18\x03 \x01(\r\"0\n\rroute_group_t\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\x11\n\tendpoints\x18\x02 \x03(\t*\x80\x06\n\nmsg_type_t\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0c\n\x08PING_REQ\x10\x01\x12\x0c\n\x08PING_REP\x10\x02\x12\x0c\n\x08PULL_REQ\x10\x03\x12\x0c\n\x08PULL_REP\x10\x04\x12\x0c\n\x08PUSH_REQ\x10\x05\x12\x0c\n\x08PUSH_REP\x10\x06\x12\n\n\x06\x44O_REQ\x10\x07\x12\n\n\x06\x44O_REP\x10\x08\x12\x0b\n\x07\x44O2_REQ\x10\t\x12\x0b\n\x07\x44O2_REP\x10\n\x12\x0c\n\x08\x41UTH_REQ\x10\x1b\x12\x0c\n\x08\x41UTH_REP\x10\x1c\x12\n\n\x06OK_REP\x10\x1d\x12\r\n\tERROR_REP\x10\x1e\x12\x0b\n\x07OK2_REP\x10\x1f\x12\x0e\n\nERROR2_REP\x10 \x12\x19\n\x15REGISTER_FRONTEND_REQ\x10\x41\x12\x19\n\x15REGISTER_FRONTEND_REP\x10\x42\x12\x11\n\rADD_ROUTE_REQ\x10\x43\x12\x11\n\rADD_ROUTE_REP\x10\x44\x12\x14\n\x10\x44\x45LETE_ROUTE_REQ\x10\x45\x12\x14\n\x10\x44\x45LETE_ROUTE_REP\x10\x46\x12\x11\n\rADD_ROUTE_MSG\x10G\x12\x14\n\x10\x44\x45LETE_ROUTE_MSG\x10H\x12\x13\n\x0fPUSH_ROUTES_REQ\x10I\x12\x13\n\x0fPUSH_ROUTES_REP\x10J\x12\x13\n\x0fPULL_ROUTES_REQ\x10K\x12\x13\n\x0fPULL_ROUTES_REP\x10L\x12\x18\n\x14REGISTER_BACKEND_REQ\x10Q\x12\x18\n\x14REGISTER_BACKEND_REP\x10R\x12\x15\n\x11\x44\x45LETE_TOPICS_REQ\x10S\x12\x15\n\x11\x44\x45LETE_TOPICS_REP\x10T\x12\x18\n\x14RESOLVE_FRONTEND_REQ\x10\x61\x12\x18\n\x14RESOLVE_FRONTEND_REP\x10\x62\x12\x17\n\x13RESOLVE_BACKEND_REQ\x10\x63\x12\x17\n\x13RESOLVE_BACKEND_REP\x10\x64\x12\r\n\tWATCH_REQ\x10i\x12\r\n\tWATCH_REP\x10j\x12\x0f\n\x0bUNWATCH_REQ\x10k\x12\x0f\n\x0bUNWATCH_REP\x10lb\x06proto3')
+  serialized_pb=_b('\n\x16maxwell_protocol.proto\x12\x10maxwell.protocol\"\x19\n\nping_req_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"\x19\n\nping_rep_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"G\n\npull_req_t\x12\r\n\x05topic\x18\x01 \x01(\t\x12\x0e\n\x06offset\x18\x02 \x01(\x03\x12\r\n\x05limit\x18\x03 \x01(\r\x12\x0b\n\x03ref\x18\x0f \x01(\r\"@\n\npull_rep_t\x12%\n\x04msgs\x18\x01 \x03(\x0b\x32\x17.maxwell.protocol.msg_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"7\n\npush_req_t\x12\r\n\x05topic\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x0c\x12\x0b\n\x03ref\x18\x0f \x01(\r\"\x19\n\npush_rep_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"\x96\x01\n\x08\x64o_req_t\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\x12\x16\n\x0esource_enabled\x18\r \x01(\x08\x12*\n\x06source\x18\x0e \x01(\x0b\x32\x1a.maxwell.protocol.source_t\x12)\n\x06traces\x18\x0f \x03(\x0b\x32\x19.maxwell.protocol.trace_t\"D\n\x08\x64o_rep_t\x12\r\n\x05value\x18\x01 \x01(\t\x12)\n\x06traces\x18\x0f \x03(\x0b\x32\x19.maxwell.protocol.trace_t\"\x88\x01\n\tdo2_req_t\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\x16\n\x0esource_enabled\x18\r \x01(\x08\x12*\n\x06source\x18\x0e \x01(\x0b\x32\x1a.maxwell.protocol.source_t\x12)\n\x06traces\x18\x0f \x03(\x0b\x32\x19.maxwell.protocol.trace_t\"E\n\tdo2_rep_t\x12\r\n\x05value\x18\x01 \x01(\x0c\x12)\n\x06traces\x18\x0f \x03(\x0b\x32\x19.maxwell.protocol.trace_t\"(\n\nauth_req_t\x12\r\n\x05token\x18\x01 \x01(\t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"\x19\n\nauth_rep_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"\x17\n\x08ok_rep_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"6\n\x0b\x65rror_rep_t\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0c\n\x04\x64\x65sc\x18\x02 \x01(\t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"6\n\tok2_rep_t\x12)\n\x06traces\x18\x0f \x03(\x0b\x32\x19.maxwell.protocol.trace_t\"U\n\x0c\x65rror2_rep_t\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0c\n\x04\x64\x65sc\x18\x02 \x01(\t\x12)\n\x06traces\x18\x0f \x03(\x0b\x32\x19.maxwell.protocol.trace_t\"(\n\x0bwatch_req_t\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"\x1a\n\x0bwatch_rep_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"*\n\runwatch_req_t\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"\x1c\n\runwatch_rep_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"8\n\x17register_frontend_req_t\x12\x10\n\x08\x65ndpoint\x18\x01 \x01(\t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"&\n\x17register_frontend_rep_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\",\n\x0f\x61\x64\x64_route_req_t\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"\x1e\n\x0f\x61\x64\x64_route_rep_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"/\n\x12\x64\x65lete_route_req_t\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"!\n\x12\x64\x65lete_route_rep_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"0\n\x0f\x61\x64\x64_route_msg_t\x12\x10\n\x08\x65ndpoint\x18\x01 \x01(\t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"A\n\x12\x64\x65lete_route_msg_t\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\x10\n\x08\x65ndpoint\x18\x02 \x01(\t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"/\n\x11push_routes_req_t\x12\r\n\x05types\x18\x01 \x03(\t\x12\x0b\n\x03ref\x18\x0f \x01(\r\" \n\x11push_routes_rep_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\" \n\x11pull_routes_req_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"W\n\x11pull_routes_rep_t\x12\x35\n\x0croute_groups\x18\x01 \x03(\x0b\x32\x1f.maxwell.protocol.route_group_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"2\n\x13\x64\x65lete_topics_req_t\x12\x0e\n\x06topics\x18\x01 \x03(\t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"\"\n\x13\x64\x65lete_topics_rep_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"7\n\x16register_backend_req_t\x12\x10\n\x08\x65ndpoint\x18\x01 \x01(\t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"%\n\x16register_backend_rep_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"%\n\x16resolve_frontend_req_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"7\n\x16resolve_frontend_rep_t\x12\x10\n\x08\x65ndpoint\x18\x01 \x01(\t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"3\n\x15resolve_backend_req_t\x12\r\n\x05topic\x18\x01 \x01(\t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"6\n\x15resolve_backend_rep_t\x12\x10\n\x08\x65ndpoint\x18\x01 \x01(\t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"\x1f\n\x10resolve_ip_req_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"+\n\x10resolve_ip_rep_t\x12\n\n\x02ip\x18\x01 \x01(\t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"9\n\x05msg_t\x12\x0e\n\x06offset\x18\x01 \x01(\x04\x12\r\n\x05value\x18\x02 \x01(\x0c\x12\x11\n\ttimestamp\x18\x03 \x01(\x04\"+\n\x08source_t\x12\r\n\x05\x61gent\x18\x01 \x01(\t\x12\x10\n\x08\x65ndpoint\x18\x02 \x01(\t\";\n\x07trace_t\x12\x0b\n\x03ref\x18\x01 \x01(\r\x12\x12\n\nhandler_id\x18\x02 \x01(\r\x12\x0f\n\x07node_id\x18\x03 \x01(\r\"0\n\rroute_group_t\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\x11\n\tendpoints\x18\x02 \x03(\t*\xa8\x06\n\nmsg_type_t\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0c\n\x08PING_REQ\x10\x01\x12\x0c\n\x08PING_REP\x10\x02\x12\x0c\n\x08PULL_REQ\x10\x03\x12\x0c\n\x08PULL_REP\x10\x04\x12\x0c\n\x08PUSH_REQ\x10\x05\x12\x0c\n\x08PUSH_REP\x10\x06\x12\n\n\x06\x44O_REQ\x10\x07\x12\n\n\x06\x44O_REP\x10\x08\x12\x0b\n\x07\x44O2_REQ\x10\t\x12\x0b\n\x07\x44O2_REP\x10\n\x12\x0c\n\x08\x41UTH_REQ\x10\x1b\x12\x0c\n\x08\x41UTH_REP\x10\x1c\x12\n\n\x06OK_REP\x10\x1d\x12\r\n\tERROR_REP\x10\x1e\x12\x0b\n\x07OK2_REP\x10\x1f\x12\x0e\n\nERROR2_REP\x10 \x12\x19\n\x15REGISTER_FRONTEND_REQ\x10\x41\x12\x19\n\x15REGISTER_FRONTEND_REP\x10\x42\x12\x11\n\rADD_ROUTE_REQ\x10\x43\x12\x11\n\rADD_ROUTE_REP\x10\x44\x12\x14\n\x10\x44\x45LETE_ROUTE_REQ\x10\x45\x12\x14\n\x10\x44\x45LETE_ROUTE_REP\x10\x46\x12\x11\n\rADD_ROUTE_MSG\x10G\x12\x14\n\x10\x44\x45LETE_ROUTE_MSG\x10H\x12\x13\n\x0fPUSH_ROUTES_REQ\x10I\x12\x13\n\x0fPUSH_ROUTES_REP\x10J\x12\x13\n\x0fPULL_ROUTES_REQ\x10K\x12\x13\n\x0fPULL_ROUTES_REP\x10L\x12\x18\n\x14REGISTER_BACKEND_REQ\x10Q\x12\x18\n\x14REGISTER_BACKEND_REP\x10R\x12\x15\n\x11\x44\x45LETE_TOPICS_REQ\x10S\x12\x15\n\x11\x44\x45LETE_TOPICS_REP\x10T\x12\x18\n\x14RESOLVE_FRONTEND_REQ\x10\x61\x12\x18\n\x14RESOLVE_FRONTEND_REP\x10\x62\x12\x17\n\x13RESOLVE_BACKEND_REQ\x10\x63\x12\x17\n\x13RESOLVE_BACKEND_REP\x10\x64\x12\r\n\tWATCH_REQ\x10i\x12\r\n\tWATCH_REP\x10j\x12\x0f\n\x0bUNWATCH_REQ\x10k\x12\x0f\n\x0bUNWATCH_REP\x10l\x12\x12\n\x0eRESOLVE_IP_REQ\x10y\x12\x12\n\x0eRESOLVE_IP_REP\x10zb\x06proto3')
 )
 
 _MSG_TYPE_T = _descriptor.EnumDescriptor(
@@ -193,11 +193,19 @@ _MSG_TYPE_T = _descriptor.EnumDescriptor(
       name='UNWATCH_REP', index=40, number=108,
       options=None,
       type=None),
+    _descriptor.EnumValueDescriptor(
+      name='RESOLVE_IP_REQ', index=41, number=121,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='RESOLVE_IP_REP', index=42, number=122,
+      options=None,
+      type=None),
   ],
   containing_type=None,
   options=None,
-  serialized_start=2379,
-  serialized_end=3147,
+  serialized_start=2457,
+  serialized_end=3265,
 )
 _sym_db.RegisterEnumDescriptor(_MSG_TYPE_T)
 
@@ -243,6 +251,8 @@ WATCH_REQ = 105
 WATCH_REP = 106
 UNWATCH_REQ = 107
 UNWATCH_REP = 108
+RESOLVE_IP_REQ = 121
+RESOLVE_IP_REP = 122
 
 
 
@@ -1731,6 +1741,75 @@ _RESOLVE_BACKEND_REP_T = _descriptor.Descriptor(
 )
 
 
+_RESOLVE_IP_REQ_T = _descriptor.Descriptor(
+  name='resolve_ip_req_t',
+  full_name='maxwell.protocol.resolve_ip_req_t',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='ref', full_name='maxwell.protocol.resolve_ip_req_t.ref', index=0,
+      number=15, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2163,
+  serialized_end=2194,
+)
+
+
+_RESOLVE_IP_REP_T = _descriptor.Descriptor(
+  name='resolve_ip_rep_t',
+  full_name='maxwell.protocol.resolve_ip_rep_t',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='ip', full_name='maxwell.protocol.resolve_ip_rep_t.ip', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ref', full_name='maxwell.protocol.resolve_ip_rep_t.ref', index=1,
+      number=15, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2196,
+  serialized_end=2239,
+)
+
+
 _MSG_T = _descriptor.Descriptor(
   name='msg_t',
   full_name='maxwell.protocol.msg_t',
@@ -1771,8 +1850,8 @@ _MSG_T = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2163,
-  serialized_end=2220,
+  serialized_start=2241,
+  serialized_end=2298,
 )
 
 
@@ -1809,8 +1888,8 @@ _SOURCE_T = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2222,
-  serialized_end=2265,
+  serialized_start=2300,
+  serialized_end=2343,
 )
 
 
@@ -1854,8 +1933,8 @@ _TRACE_T = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2267,
-  serialized_end=2326,
+  serialized_start=2345,
+  serialized_end=2404,
 )
 
 
@@ -1892,8 +1971,8 @@ _ROUTE_GROUP_T = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2328,
-  serialized_end=2376,
+  serialized_start=2406,
+  serialized_end=2454,
 )
 
 _PULL_REP_T.fields_by_name['msgs'].message_type = _MSG_T
@@ -1946,6 +2025,8 @@ DESCRIPTOR.message_types_by_name['resolve_frontend_req_t'] = _RESOLVE_FRONTEND_R
 DESCRIPTOR.message_types_by_name['resolve_frontend_rep_t'] = _RESOLVE_FRONTEND_REP_T
 DESCRIPTOR.message_types_by_name['resolve_backend_req_t'] = _RESOLVE_BACKEND_REQ_T
 DESCRIPTOR.message_types_by_name['resolve_backend_rep_t'] = _RESOLVE_BACKEND_REP_T
+DESCRIPTOR.message_types_by_name['resolve_ip_req_t'] = _RESOLVE_IP_REQ_T
+DESCRIPTOR.message_types_by_name['resolve_ip_rep_t'] = _RESOLVE_IP_REP_T
 DESCRIPTOR.message_types_by_name['msg_t'] = _MSG_T
 DESCRIPTOR.message_types_by_name['source_t'] = _SOURCE_T
 DESCRIPTOR.message_types_by_name['trace_t'] = _TRACE_T
@@ -2232,6 +2313,20 @@ resolve_backend_rep_t = _reflection.GeneratedProtocolMessageType('resolve_backen
   # @@protoc_insertion_point(class_scope:maxwell.protocol.resolve_backend_rep_t)
   ))
 _sym_db.RegisterMessage(resolve_backend_rep_t)
+
+resolve_ip_req_t = _reflection.GeneratedProtocolMessageType('resolve_ip_req_t', (_message.Message,), dict(
+  DESCRIPTOR = _RESOLVE_IP_REQ_T,
+  __module__ = 'maxwell_protocol_pb2'
+  # @@protoc_insertion_point(class_scope:maxwell.protocol.resolve_ip_req_t)
+  ))
+_sym_db.RegisterMessage(resolve_ip_req_t)
+
+resolve_ip_rep_t = _reflection.GeneratedProtocolMessageType('resolve_ip_rep_t', (_message.Message,), dict(
+  DESCRIPTOR = _RESOLVE_IP_REP_T,
+  __module__ = 'maxwell_protocol_pb2'
+  # @@protoc_insertion_point(class_scope:maxwell.protocol.resolve_ip_rep_t)
+  ))
+_sym_db.RegisterMessage(resolve_ip_rep_t)
 
 msg_t = _reflection.GeneratedProtocolMessageType('msg_t', (_message.Message,), dict(
   DESCRIPTOR = _MSG_T,

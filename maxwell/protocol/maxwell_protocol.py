@@ -74,6 +74,10 @@ def encode_msg(msg):
         return (98).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
     elif msg.__class__ == maxwell_protocol_pb2.resolve_frontend_req_t:
         return (97).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
+    elif msg.__class__ == maxwell_protocol_pb2.resolve_ip_rep_t:
+        return (122).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
+    elif msg.__class__ == maxwell_protocol_pb2.resolve_ip_req_t:
+        return (121).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
     elif msg.__class__ == maxwell_protocol_pb2.unwatch_rep_t:
         return (108).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
     elif msg.__class__ == maxwell_protocol_pb2.unwatch_req_t:
@@ -230,6 +234,14 @@ def decode_msg(encoded_msg):
         return msg
     elif msg_type_uint32 == 97:
         msg = maxwell_protocol_pb2.resolve_frontend_req_t()
+        msg.ParseFromString(encoded_msg[1:])
+        return msg
+    elif msg_type_uint32 == 122:
+        msg = maxwell_protocol_pb2.resolve_ip_rep_t()
+        msg.ParseFromString(encoded_msg[1:])
+        return msg
+    elif msg_type_uint32 == 121:
+        msg = maxwell_protocol_pb2.resolve_ip_req_t()
         msg.ParseFromString(encoded_msg[1:])
         return msg
     elif msg_type_uint32 == 108:
