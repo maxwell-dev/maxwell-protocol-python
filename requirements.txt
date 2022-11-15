@@ -5,4 +5,4 @@
 #    pip-compile
 #
 protobuf==4.21.9
-    # via maxwell_protocol (setup.py)
+    # via maxwell-protocol (setup.py)
