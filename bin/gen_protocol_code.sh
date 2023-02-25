@@ -5,7 +5,7 @@ cd ${current_dir}
 
 # Fetch proto files
 if [[ ! -d proto ]]; then
-    git clone https://github.com/maxwell-dev/maxwell-protocol.git proto;
+    git clone -b dev https://github.com/maxwell-dev/maxwell-protocol.git proto;
 fi
 
 # Init packages
@@ -23,6 +23,6 @@ except ImportError:
 protoc -I=proto --python_out=maxwell/protocol maxwell_protocol.proto
 
 # Generate api files
-bin/maxwell_protocol_gen_api.py \
+bin/gen_protocol_api.py \
     --proto_file proto/maxwell_protocol.proto \
     --enum_type_names msg_type_t
