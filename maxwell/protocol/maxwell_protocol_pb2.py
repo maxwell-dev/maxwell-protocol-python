@@ -13,15 +13,15 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x16maxwell_protocol.proto\x12\x10maxwell.protocol\"\x19\n\nping_req_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"\x19\n\nping_rep_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"7\n\npush_req_t\x12\r\n\x05topic\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x0c\x12\x0b\n\x03ref\x18\x0f \x01(\r\"\x19\n\npush_rep_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"m\n\npull_req_t\x12\r\n\x05topic\x18\x01 \x01(\t\x12\x0e\n\x06offset\x18\x02 \x01(\x03\x12\r\n\x05limit\x18\x03 \x01(\r\x12\x11\n\tconn0_ref\x18\r \x01(\r\x12\x11\n\tconn1_ref\x18\x0e \x01(\r\x12\x0b\n\x03ref\x18\x0f \x01(\r\"f\n\npull_rep_t\x12%\n\x04msgs\x18\x01 \x03(\x0b\x32\x17.maxwell.protocol.msg_t\x12\x11\n\tconn0_ref\x18\r \x01(\r\x12\x11\n\tconn1_ref\x18\x0e \x01(\r\x12\x0b\n\x03ref\x18\x0f \x01(\r\"\x89\x01\n\treq_req_t\x12\x0c\n\x04path\x18\x01 \x01(\t\x12\x0f\n\x07payload\x18\x02 \x01(\t\x12*\n\x06header\x18\x0c \x01(\x0b\x32\x1a.maxwell.protocol.header_t\x12\x11\n\tconn0_ref\x18\r \x01(\r\x12\x11\n\tconn1_ref\x18\x0e \x01(\r\x12\x0b\n\x03ref\x18\x0f \x01(\r\"O\n\treq_rep_t\x12\x0f\n\x07payload\x18\x01 \x01(\t\x12\x11\n\tconn0_ref\x18\r \x01(\r\x12\x11\n\tconn1_ref\x18\x0e \x01(\r\x12\x0b\n\x03ref\x18\x0f \x01(\r\"N\n\nauth_req_t\x12\r\n\x05token\x18\x01 \x01(\t\x12\x11\n\tconn0_ref\x18\r \x01(\r\x12\x11\n\tconn1_ref\x18\x0e \x01(\r\x12\x0b\n\x03ref\x18\x0f \x01(\r\"?\n\nauth_rep_t\x12\x11\n\tconn0_ref\x18\r \x01(\r\x12\x11\n\tconn1_ref\x18\x0e \x01(\r\x12\x0b\n\x03ref\x18\x0f \x01(\r\"\x17\n\x08ok_rep_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"6\n\x0b\x65rror_rep_t\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0c\n\x04\x64\x65sc\x18\x02 \x01(\t\x12\x0b\n\x03ref\x18\x0f \x01(\r\">\n\tok2_rep_t\x12\x11\n\tconn0_ref\x18\r \x01(\r\x12\x11\n\tconn1_ref\x18\x0e \x01(\r\x12\x0b\n\x03ref\x18\x0f \x01(\r\"]\n\x0c\x65rror2_rep_t\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0c\n\x04\x64\x65sc\x18\x02 \x01(\t\x12\x11\n\tconn0_ref\x18\r \x01(\r\x12\x11\n\tconn1_ref\x18\x0e \x01(\r\x12\x0b\n\x03ref\x18\x0f \x01(\r\"8\n\x17register_frontend_req_t\x12\x10\n\x08\x65ndpoint\x18\x01 \x01(\t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"&\n\x17register_frontend_rep_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"7\n\x16register_backend_req_t\x12\x10\n\x08\x65ndpoint\x18\x01 \x01(\t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"%\n\x16register_backend_rep_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"6\n\x15register_server_req_t\x12\x10\n\x08\x65ndpoint\x18\x01 \x01(\t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"$\n\x15register_server_rep_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\".\n\x10\x61\x64\x64_routes_req_t\x12\r\n\x05paths\x18\x01 \x03(\t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"\x1f\n\x10\x61\x64\x64_routes_rep_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"1\n\x13\x64\x65lete_routes_req_t\x12\r\n\x05paths\x18\x01 \x03(\t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"\"\n\x13\x64\x65lete_routes_rep_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"\x1f\n\x10get_routes_req_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"J\n\x10get_routes_rep_t\x12)\n\x06routes\x18\x01 \x03(\x0b\x32\x19.maxwell.protocol.route_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"@\n\x11route_added_msg_t\x12\x0c\n\x04path\x18\x01 \x01(\t\x12\x10\n\x08\x65ndpoint\x18\x02 \x01(\t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"B\n\x13route_deleted_msg_t\x12\x0c\n\x04path\x18\x01 \x01(\t\x12\x10\n\x08\x65ndpoint\x18\x02 \x01(\t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"]\n\x1aroute_status_changed_msg_t\x12\x0c\n\x04path\x18\x01 \x01(\t\x12\x10\n\x08\x65ndpoint\x18\x02 \x01(\t\x12\x12\n\nis_healthy\x18\x03 \x01(\x08\x12\x0b\n\x03ref\x18\x0f \x01(\r\"$\n\x15\x61ssign_frontend_req_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"6\n\x15\x61ssign_frontend_rep_t\x12\x10\n\x08\x65ndpoint\x18\x01 \x01(\t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"0\n\x12locate_topic_req_t\x12\r\n\x05topic\x18\x01 \x01(\t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"3\n\x12locate_topic_rep_t\x12\x10\n\x08\x65ndpoint\x18\x01 \x01(\t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"\x1f\n\x10resolve_ip_req_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"+\n\x10resolve_ip_rep_t\x12\n\n\x02ip\x18\x01 \x01(\t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"9\n\x05msg_t\x12\x0e\n\x06offset\x18\x01 \x01(\x04\x12\r\n\x05value\x18\x02 \x01(\x0c\x12\x11\n\ttimestamp\x18\x03 \x01(\x04\"+\n\x08header_t\x12\r\n\x05\x61gent\x18\x01 \x01(\t\x12\x10\n\x08\x65ndpoint\x18\x02 \x01(\t\"=\n\x07route_t\x12\x0c\n\x04path\x18\x01 \x01(\t\x12\x10\n\x08\x65ndpoint\x18\x02 \x01(\t\x12\x12\n\nis_healthy\x18\x03 \x01(\x08*\x97\x05\n\nmsg_type_t\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0c\n\x08PING_REQ\x10\x01\x12\x0c\n\x08PING_REP\x10\x02\x12\x0c\n\x08PUSH_REQ\x10\x03\x12\x0c\n\x08PUSH_REP\x10\x04\x12\x0c\n\x08PULL_REQ\x10\x05\x12\x0c\n\x08PULL_REP\x10\x06\x12\x0b\n\x07REQ_REQ\x10\x07\x12\x0b\n\x07REQ_REP\x10\x08\x12\x0c\n\x08\x41UTH_REQ\x10\x1b\x12\x0c\n\x08\x41UTH_REP\x10\x1c\x12\n\n\x06OK_REP\x10\x1d\x12\r\n\tERROR_REP\x10\x1e\x12\x0b\n\x07OK2_REP\x10\x1f\x12\x0e\n\nERROR2_REP\x10 \x12\x19\n\x15REGISTER_FRONTEND_REQ\x10\x41\x12\x19\n\x15REGISTER_FRONTEND_REP\x10\x42\x12\x18\n\x14REGISTER_BACKEND_REQ\x10\x43\x12\x18\n\x14REGISTER_BACKEND_REP\x10\x44\x12\x17\n\x13REGISTER_SERVER_REQ\x10\x45\x12\x17\n\x13REGISTER_SERVER_REP\x10\x46\x12\x12\n\x0e\x41\x44\x44_ROUTES_REQ\x10[\x12\x12\n\x0e\x41\x44\x44_ROUTES_REP\x10\\\x12\x12\n\x0eGET_ROUTES_REQ\x10_\x12\x12\n\x0eGET_ROUTES_REP\x10`\x12\x13\n\x0fROUTE_ADDED_MSG\x10\x64\x12\x15\n\x11ROUTE_DELETED_MSG\x10\x65\x12\x1c\n\x18ROUTE_STATUS_CHANGED_MSG\x10\x66\x12\x17\n\x13\x41SSIGN_FRONTEND_REQ\x10o\x12\x17\n\x13\x41SSIGN_FRONTEND_REP\x10p\x12\x14\n\x10LOCATE_TOPIC_REQ\x10q\x12\x14\n\x10LOCATE_TOPIC_REP\x10r\x12\x12\n\x0eRESOLVE_IP_REQ\x10y\x12\x12\n\x0eRESOLVE_IP_REP\x10zb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x16maxwell_protocol.proto\x12\x10maxwell.protocol\"\x19\n\nping_req_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"\x19\n\nping_rep_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"7\n\npush_req_t\x12\r\n\x05topic\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x0c\x12\x0b\n\x03ref\x18\x0f \x01(\r\"\x19\n\npush_rep_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"m\n\npull_req_t\x12\r\n\x05topic\x18\x01 \x01(\t\x12\x0e\n\x06offset\x18\x02 \x01(\x03\x12\r\n\x05limit\x18\x03 \x01(\r\x12\x11\n\tconn0_ref\x18\r \x01(\r\x12\x11\n\tconn1_ref\x18\x0e \x01(\r\x12\x0b\n\x03ref\x18\x0f \x01(\r\"f\n\npull_rep_t\x12%\n\x04msgs\x18\x01 \x03(\x0b\x32\x17.maxwell.protocol.msg_t\x12\x11\n\tconn0_ref\x18\r \x01(\r\x12\x11\n\tconn1_ref\x18\x0e \x01(\r\x12\x0b\n\x03ref\x18\x0f \x01(\r\"\x89\x01\n\treq_req_t\x12\x0c\n\x04path\x18\x01 \x01(\t\x12\x0f\n\x07payload\x18\x02 \x01(\t\x12*\n\x06header\x18\x0c \x01(\x0b\x32\x1a.maxwell.protocol.header_t\x12\x11\n\tconn0_ref\x18\r \x01(\r\x12\x11\n\tconn1_ref\x18\x0e \x01(\r\x12\x0b\n\x03ref\x18\x0f \x01(\r\"O\n\treq_rep_t\x12\x0f\n\x07payload\x18\x01 \x01(\t\x12\x11\n\tconn0_ref\x18\r \x01(\r\x12\x11\n\tconn1_ref\x18\x0e \x01(\r\x12\x0b\n\x03ref\x18\x0f \x01(\r\"N\n\nauth_req_t\x12\r\n\x05token\x18\x01 \x01(\t\x12\x11\n\tconn0_ref\x18\r \x01(\r\x12\x11\n\tconn1_ref\x18\x0e \x01(\r\x12\x0b\n\x03ref\x18\x0f \x01(\r\"?\n\nauth_rep_t\x12\x11\n\tconn0_ref\x18\r \x01(\r\x12\x11\n\tconn1_ref\x18\x0e \x01(\r\x12\x0b\n\x03ref\x18\x0f \x01(\r\"\x17\n\x08ok_rep_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"6\n\x0b\x65rror_rep_t\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0c\n\x04\x64\x65sc\x18\x02 \x01(\t\x12\x0b\n\x03ref\x18\x0f \x01(\r\">\n\tok2_rep_t\x12\x11\n\tconn0_ref\x18\r \x01(\r\x12\x11\n\tconn1_ref\x18\x0e \x01(\r\x12\x0b\n\x03ref\x18\x0f \x01(\r\"]\n\x0c\x65rror2_rep_t\x12\x0c\n\x04\x63ode\x18\x01 \x01(\x05\x12\x0c\n\x04\x64\x65sc\x18\x02 \x01(\t\x12\x11\n\tconn0_ref\x18\r \x01(\r\x12\x11\n\tconn1_ref\x18\x0e \x01(\r\x12\x0b\n\x03ref\x18\x0f \x01(\r\"`\n\x17register_frontend_req_t\x12\x11\n\thttp_port\x18\x01 \x01(\r\x12\x12\n\nhttps_port\x18\x02 \x01(\r\x12\x11\n\tpublic_ip\x18\x03 \x01(\t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"&\n\x17register_frontend_rep_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"8\n\x16register_backend_req_t\x12\x11\n\thttp_port\x18\x01 \x01(\r\x12\x0b\n\x03ref\x18\x0f \x01(\r\"%\n\x16register_backend_rep_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"7\n\x15register_server_req_t\x12\x11\n\thttp_port\x18\x01 \x01(\r\x12\x0b\n\x03ref\x18\x0f \x01(\r\"$\n\x15register_server_rep_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\".\n\x10\x61\x64\x64_routes_req_t\x12\r\n\x05paths\x18\x01 \x03(\t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"\x1f\n\x10\x61\x64\x64_routes_rep_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"1\n\x13\x64\x65lete_routes_req_t\x12\r\n\x05paths\x18\x01 \x03(\t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"\"\n\x13\x64\x65lete_routes_rep_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"\x1f\n\x10get_routes_req_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"J\n\x10get_routes_rep_t\x12)\n\x06routes\x18\x01 \x03(\x0b\x32\x19.maxwell.protocol.route_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"@\n\x11route_added_msg_t\x12\x0c\n\x04path\x18\x01 \x01(\t\x12\x10\n\x08\x65ndpoint\x18\x02 \x01(\t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"B\n\x13route_deleted_msg_t\x12\x0c\n\x04path\x18\x01 \x01(\t\x12\x10\n\x08\x65ndpoint\x18\x02 \x01(\t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"]\n\x1aroute_status_changed_msg_t\x12\x0c\n\x04path\x18\x01 \x01(\t\x12\x10\n\x08\x65ndpoint\x18\x02 \x01(\t\x12\x12\n\nis_healthy\x18\x03 \x01(\x08\x12\x0b\n\x03ref\x18\x0f \x01(\r\"$\n\x15\x61ssign_frontend_req_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"6\n\x15\x61ssign_frontend_rep_t\x12\x10\n\x08\x65ndpoint\x18\x01 \x01(\t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"0\n\x12locate_topic_req_t\x12\r\n\x05topic\x18\x01 \x01(\t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"3\n\x12locate_topic_rep_t\x12\x10\n\x08\x65ndpoint\x18\x01 \x01(\t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"\x1f\n\x10resolve_ip_req_t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"+\n\x10resolve_ip_rep_t\x12\n\n\x02ip\x18\x01 \x01(\t\x12\x0b\n\x03ref\x18\x0f \x01(\r\"9\n\x05msg_t\x12\x0e\n\x06offset\x18\x01 \x01(\x04\x12\r\n\x05value\x18\x02 \x01(\x0c\x12\x11\n\ttimestamp\x18\x03 \x01(\x04\"+\n\x08header_t\x12\r\n\x05\x61gent\x18\x01 \x01(\t\x12\x10\n\x08\x65ndpoint\x18\x02 \x01(\t\"=\n\x07route_t\x12\x0c\n\x04path\x18\x01 \x01(\t\x12\x10\n\x08\x65ndpoint\x18\x02 \x01(\t\x12\x12\n\nis_healthy\x18\x03 \x01(\x08*\x97\x05\n\nmsg_type_t\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0c\n\x08PING_REQ\x10\x01\x12\x0c\n\x08PING_REP\x10\x02\x12\x0c\n\x08PUSH_REQ\x10\x03\x12\x0c\n\x08PUSH_REP\x10\x04\x12\x0c\n\x08PULL_REQ\x10\x05\x12\x0c\n\x08PULL_REP\x10\x06\x12\x0b\n\x07REQ_REQ\x10\x07\x12\x0b\n\x07REQ_REP\x10\x08\x12\x0c\n\x08\x41UTH_REQ\x10\x1b\x12\x0c\n\x08\x41UTH_REP\x10\x1c\x12\n\n\x06OK_REP\x10\x1d\x12\r\n\tERROR_REP\x10\x1e\x12\x0b\n\x07OK2_REP\x10\x1f\x12\x0e\n\nERROR2_REP\x10 \x12\x19\n\x15REGISTER_FRONTEND_REQ\x10\x41\x12\x19\n\x15REGISTER_FRONTEND_REP\x10\x42\x12\x18\n\x14REGISTER_BACKEND_REQ\x10\x43\x12\x18\n\x14REGISTER_BACKEND_REP\x10\x44\x12\x17\n\x13REGISTER_SERVER_REQ\x10\x45\x12\x17\n\x13REGISTER_SERVER_REP\x10\x46\x12\x12\n\x0e\x41\x44\x44_ROUTES_REQ\x10[\x12\x12\n\x0e\x41\x44\x44_ROUTES_REP\x10\\\x12\x12\n\x0eGET_ROUTES_REQ\x10_\x12\x12\n\x0eGET_ROUTES_REP\x10`\x12\x13\n\x0fROUTE_ADDED_MSG\x10\x64\x12\x15\n\x11ROUTE_DELETED_MSG\x10\x65\x12\x1c\n\x18ROUTE_STATUS_CHANGED_MSG\x10\x66\x12\x17\n\x13\x41SSIGN_FRONTEND_REQ\x10o\x12\x17\n\x13\x41SSIGN_FRONTEND_REP\x10p\x12\x14\n\x10LOCATE_TOPIC_REQ\x10q\x12\x14\n\x10LOCATE_TOPIC_REP\x10r\x12\x12\n\x0eRESOLVE_IP_REQ\x10y\x12\x12\n\x0eRESOLVE_IP_REP\x10zb\x06proto3')
 
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, globals())
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'maxwell_protocol_pb2', globals())
 if _descriptor._USE_C_DESCRIPTORS == False:
 
   DESCRIPTOR._options = None
-  _MSG_TYPE_T._serialized_start=2240
-  _MSG_TYPE_T._serialized_end=2903
+  _MSG_TYPE_T._serialized_start=2282
+  _MSG_TYPE_T._serialized_end=2945
   _PING_REQ_T._serialized_start=44
   _PING_REQ_T._serialized_end=69
   _PING_REP_T._serialized_start=71
@@ -51,51 +51,51 @@ if _descriptor._USE_C_DESCRIPTORS == False:
   _ERROR2_REP_T._serialized_start=908
   _ERROR2_REP_T._serialized_end=1001
   _REGISTER_FRONTEND_REQ_T._serialized_start=1003
-  _REGISTER_FRONTEND_REQ_T._serialized_end=1059
-  _REGISTER_FRONTEND_REP_T._serialized_start=1061
-  _REGISTER_FRONTEND_REP_T._serialized_end=1099
-  _REGISTER_BACKEND_REQ_T._serialized_start=1101
-  _REGISTER_BACKEND_REQ_T._serialized_end=1156
-  _REGISTER_BACKEND_REP_T._serialized_start=1158
-  _REGISTER_BACKEND_REP_T._serialized_end=1195
-  _REGISTER_SERVER_REQ_T._serialized_start=1197
-  _REGISTER_SERVER_REQ_T._serialized_end=1251
-  _REGISTER_SERVER_REP_T._serialized_start=1253
-  _REGISTER_SERVER_REP_T._serialized_end=1289
-  _ADD_ROUTES_REQ_T._serialized_start=1291
-  _ADD_ROUTES_REQ_T._serialized_end=1337
-  _ADD_ROUTES_REP_T._serialized_start=1339
-  _ADD_ROUTES_REP_T._serialized_end=1370
-  _DELETE_ROUTES_REQ_T._serialized_start=1372
-  _DELETE_ROUTES_REQ_T._serialized_end=1421
-  _DELETE_ROUTES_REP_T._serialized_start=1423
-  _DELETE_ROUTES_REP_T._serialized_end=1457
-  _GET_ROUTES_REQ_T._serialized_start=1459
-  _GET_ROUTES_REQ_T._serialized_end=1490
-  _GET_ROUTES_REP_T._serialized_start=1492
-  _GET_ROUTES_REP_T._serialized_end=1566
-  _ROUTE_ADDED_MSG_T._serialized_start=1568
-  _ROUTE_ADDED_MSG_T._serialized_end=1632
-  _ROUTE_DELETED_MSG_T._serialized_start=1634
-  _ROUTE_DELETED_MSG_T._serialized_end=1700
-  _ROUTE_STATUS_CHANGED_MSG_T._serialized_start=1702
-  _ROUTE_STATUS_CHANGED_MSG_T._serialized_end=1795
-  _ASSIGN_FRONTEND_REQ_T._serialized_start=1797
-  _ASSIGN_FRONTEND_REQ_T._serialized_end=1833
-  _ASSIGN_FRONTEND_REP_T._serialized_start=1835
-  _ASSIGN_FRONTEND_REP_T._serialized_end=1889
-  _LOCATE_TOPIC_REQ_T._serialized_start=1891
-  _LOCATE_TOPIC_REQ_T._serialized_end=1939
-  _LOCATE_TOPIC_REP_T._serialized_start=1941
-  _LOCATE_TOPIC_REP_T._serialized_end=1992
-  _RESOLVE_IP_REQ_T._serialized_start=1994
-  _RESOLVE_IP_REQ_T._serialized_end=2025
-  _RESOLVE_IP_REP_T._serialized_start=2027
-  _RESOLVE_IP_REP_T._serialized_end=2070
-  _MSG_T._serialized_start=2072
-  _MSG_T._serialized_end=2129
-  _HEADER_T._serialized_start=2131
-  _HEADER_T._serialized_end=2174
-  _ROUTE_T._serialized_start=2176
-  _ROUTE_T._serialized_end=2237
+  _REGISTER_FRONTEND_REQ_T._serialized_end=1099
+  _REGISTER_FRONTEND_REP_T._serialized_start=1101
+  _REGISTER_FRONTEND_REP_T._serialized_end=1139
+  _REGISTER_BACKEND_REQ_T._serialized_start=1141
+  _REGISTER_BACKEND_REQ_T._serialized_end=1197
+  _REGISTER_BACKEND_REP_T._serialized_start=1199
+  _REGISTER_BACKEND_REP_T._serialized_end=1236
+  _REGISTER_SERVER_REQ_T._serialized_start=1238
+  _REGISTER_SERVER_REQ_T._serialized_end=1293
+  _REGISTER_SERVER_REP_T._serialized_start=1295
+  _REGISTER_SERVER_REP_T._serialized_end=1331
+  _ADD_ROUTES_REQ_T._serialized_start=1333
+  _ADD_ROUTES_REQ_T._serialized_end=1379
+  _ADD_ROUTES_REP_T._serialized_start=1381
+  _ADD_ROUTES_REP_T._serialized_end=1412
+  _DELETE_ROUTES_REQ_T._serialized_start=1414
+  _DELETE_ROUTES_REQ_T._serialized_end=1463
+  _DELETE_ROUTES_REP_T._serialized_start=1465
+  _DELETE_ROUTES_REP_T._serialized_end=1499
+  _GET_ROUTES_REQ_T._serialized_start=1501
+  _GET_ROUTES_REQ_T._serialized_end=1532
+  _GET_ROUTES_REP_T._serialized_start=1534
+  _GET_ROUTES_REP_T._serialized_end=1608
+  _ROUTE_ADDED_MSG_T._serialized_start=1610
+  _ROUTE_ADDED_MSG_T._serialized_end=1674
+  _ROUTE_DELETED_MSG_T._serialized_start=1676
+  _ROUTE_DELETED_MSG_T._serialized_end=1742
+  _ROUTE_STATUS_CHANGED_MSG_T._serialized_start=1744
+  _ROUTE_STATUS_CHANGED_MSG_T._serialized_end=1837
+  _ASSIGN_FRONTEND_REQ_T._serialized_start=1839
+  _ASSIGN_FRONTEND_REQ_T._serialized_end=1875
+  _ASSIGN_FRONTEND_REP_T._serialized_start=1877
+  _ASSIGN_FRONTEND_REP_T._serialized_end=1931
+  _LOCATE_TOPIC_REQ_T._serialized_start=1933
+  _LOCATE_TOPIC_REQ_T._serialized_end=1981
+  _LOCATE_TOPIC_REP_T._serialized_start=1983
+  _LOCATE_TOPIC_REP_T._serialized_end=2034
+  _RESOLVE_IP_REQ_T._serialized_start=2036
+  _RESOLVE_IP_REQ_T._serialized_end=2067
+  _RESOLVE_IP_REP_T._serialized_start=2069
+  _RESOLVE_IP_REP_T._serialized_end=2112
+  _MSG_T._serialized_start=2114
+  _MSG_T._serialized_end=2171
+  _HEADER_T._serialized_start=2173
+  _HEADER_T._serialized_end=2216
+  _ROUTE_T._serialized_start=2218
+  _ROUTE_T._serialized_end=2279
 # @@protoc_insertion_point(module_scope)

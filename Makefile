@@ -40,8 +40,8 @@ test:
 	$(pytest)
 
 gen:
-	$(prj-dir)/bin/maxwell_protocol_gen.sh
+	$(prj-dir)/bin/gen_protocol_code.sh
 
 clean:
-	$(prj-dir)/bin/maxwell_protocol_clean.sh
+	$(prj-dir)/bin/clean_protocol_code.sh
 	rm -rf $(venv-dir) $(prj-dir)/build $(prj-dir)/dist ${prj-dir}/maxwell_protocol.egg-info
