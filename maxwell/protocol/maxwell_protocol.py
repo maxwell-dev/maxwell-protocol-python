@@ -66,7 +66,7 @@ def encode_msg(msg):
         return (100).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
     elif msg.__class__ == maxwell_protocol_pb2.route_deleted_msg_t:
         return (101).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
-    elif msg.__class__ == maxwell_protocol_pb2.route_status_changed_msg_t:
+    elif msg.__class__ == maxwell_protocol_pb2.route_health_changed_msg_t:
         return (102).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
     else:
       raise TypeError(f"Unknown msg type: {msg.__class__}")
@@ -203,7 +203,7 @@ def decode_msg(encoded_msg):
         msg.ParseFromString(encoded_msg[1:])
         return msg
     elif msg_type_uint32 == 102:
-        msg = maxwell_protocol_pb2.route_status_changed_msg_t()
+        msg = maxwell_protocol_pb2.route_health_changed_msg_t()
         msg.ParseFromString(encoded_msg[1:])
         return msg
     else:
