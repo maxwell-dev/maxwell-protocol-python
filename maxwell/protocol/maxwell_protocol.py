@@ -2,46 +2,46 @@ import maxwell.protocol.maxwell_protocol_pb2 as maxwell_protocol_pb2
 
 
 def encode_msg(msg):
-    if msg.__class__ == maxwell_protocol_pb2.add_routes_rep_t:
-        return (92).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
-    elif msg.__class__ == maxwell_protocol_pb2.add_routes_req_t:
-        return (91).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
-    elif msg.__class__ == maxwell_protocol_pb2.assign_frontend_rep_t:
-        return (112).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
-    elif msg.__class__ == maxwell_protocol_pb2.assign_frontend_req_t:
-        return (111).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
-    elif msg.__class__ == maxwell_protocol_pb2.auth_rep_t:
-        return (28).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
+    if msg.__class__ == maxwell_protocol_pb2.auth_rep_t:
+        return (42).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
     elif msg.__class__ == maxwell_protocol_pb2.auth_req_t:
-        return (27).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
+        return (41).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
     elif msg.__class__ == maxwell_protocol_pb2.error2_rep_t:
         return (32).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
     elif msg.__class__ == maxwell_protocol_pb2.error_rep_t:
         return (30).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
     elif msg.__class__ == maxwell_protocol_pb2.get_routes_rep_t:
-        return (96).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
+        return (76).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
     elif msg.__class__ == maxwell_protocol_pb2.get_routes_req_t:
-        return (95).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
+        return (75).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
     elif msg.__class__ == maxwell_protocol_pb2.locate_topic_rep_t:
-        return (114).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
+        return (86).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
     elif msg.__class__ == maxwell_protocol_pb2.locate_topic_req_t:
-        return (113).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
+        return (85).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
     elif msg.__class__ == maxwell_protocol_pb2.ok2_rep_t:
         return (31).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
     elif msg.__class__ == maxwell_protocol_pb2.ok_rep_t:
         return (29).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
+    elif msg.__class__ == maxwell_protocol_pb2.pick_frontends_rep_t:
+        return (84).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
+    elif msg.__class__ == maxwell_protocol_pb2.pick_frontends_req_t:
+        return (83).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
+    elif msg.__class__ == maxwell_protocol_pb2.pick_frontend_rep_t:
+        return (82).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
+    elif msg.__class__ == maxwell_protocol_pb2.pick_frontend_req_t:
+        return (81).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
     elif msg.__class__ == maxwell_protocol_pb2.ping_rep_t:
         return (2).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
     elif msg.__class__ == maxwell_protocol_pb2.ping_req_t:
         return (1).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
     elif msg.__class__ == maxwell_protocol_pb2.pull_rep_t:
-        return (6).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
+        return (36).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
     elif msg.__class__ == maxwell_protocol_pb2.pull_req_t:
-        return (5).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
+        return (35).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
     elif msg.__class__ == maxwell_protocol_pb2.push_rep_t:
-        return (4).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
+        return (34).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
     elif msg.__class__ == maxwell_protocol_pb2.push_req_t:
-        return (3).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
+        return (33).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
     elif msg.__class__ == maxwell_protocol_pb2.register_backend_rep_t:
         return (68).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
     elif msg.__class__ == maxwell_protocol_pb2.register_backend_req_t:
@@ -50,51 +50,33 @@ def encode_msg(msg):
         return (66).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
     elif msg.__class__ == maxwell_protocol_pb2.register_frontend_req_t:
         return (65).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
-    elif msg.__class__ == maxwell_protocol_pb2.register_server_rep_t:
+    elif msg.__class__ == maxwell_protocol_pb2.register_service_rep_t:
         return (70).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
-    elif msg.__class__ == maxwell_protocol_pb2.register_server_req_t:
+    elif msg.__class__ == maxwell_protocol_pb2.register_service_req_t:
         return (69).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
     elif msg.__class__ == maxwell_protocol_pb2.req_rep_t:
-        return (8).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
+        return (40).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
     elif msg.__class__ == maxwell_protocol_pb2.req_req_t:
-        return (7).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
+        return (39).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
     elif msg.__class__ == maxwell_protocol_pb2.resolve_ip_rep_t:
         return (122).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
     elif msg.__class__ == maxwell_protocol_pb2.resolve_ip_req_t:
         return (121).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
-    elif msg.__class__ == maxwell_protocol_pb2.route_added_msg_t:
-        return (100).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
-    elif msg.__class__ == maxwell_protocol_pb2.route_deleted_msg_t:
-        return (101).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
-    elif msg.__class__ == maxwell_protocol_pb2.route_health_changed_msg_t:
-        return (102).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
+    elif msg.__class__ == maxwell_protocol_pb2.set_routes_rep_t:
+        return (72).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
+    elif msg.__class__ == maxwell_protocol_pb2.set_routes_req_t:
+        return (71).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
     else:
       raise TypeError(f"Unknown msg type: {msg.__class__}")
 
 
 def decode_msg(encoded_msg):
     msg_type_uint32 = int.from_bytes(encoded_msg[:1], byteorder='little')
-    if msg_type_uint32 == 92:
-        msg = maxwell_protocol_pb2.add_routes_rep_t()
-        msg.ParseFromString(encoded_msg[1:])
-        return msg
-    elif msg_type_uint32 == 91:
-        msg = maxwell_protocol_pb2.add_routes_req_t()
-        msg.ParseFromString(encoded_msg[1:])
-        return msg
-    elif msg_type_uint32 == 112:
-        msg = maxwell_protocol_pb2.assign_frontend_rep_t()
-        msg.ParseFromString(encoded_msg[1:])
-        return msg
-    elif msg_type_uint32 == 111:
-        msg = maxwell_protocol_pb2.assign_frontend_req_t()
-        msg.ParseFromString(encoded_msg[1:])
-        return msg
-    elif msg_type_uint32 == 28:
+    if msg_type_uint32 == 42:
         msg = maxwell_protocol_pb2.auth_rep_t()
         msg.ParseFromString(encoded_msg[1:])
         return msg
-    elif msg_type_uint32 == 27:
+    elif msg_type_uint32 == 41:
         msg = maxwell_protocol_pb2.auth_req_t()
         msg.ParseFromString(encoded_msg[1:])
         return msg
@@ -106,19 +88,19 @@ def decode_msg(encoded_msg):
         msg = maxwell_protocol_pb2.error_rep_t()
         msg.ParseFromString(encoded_msg[1:])
         return msg
-    elif msg_type_uint32 == 96:
+    elif msg_type_uint32 == 76:
         msg = maxwell_protocol_pb2.get_routes_rep_t()
         msg.ParseFromString(encoded_msg[1:])
         return msg
-    elif msg_type_uint32 == 95:
+    elif msg_type_uint32 == 75:
         msg = maxwell_protocol_pb2.get_routes_req_t()
         msg.ParseFromString(encoded_msg[1:])
         return msg
-    elif msg_type_uint32 == 114:
+    elif msg_type_uint32 == 86:
         msg = maxwell_protocol_pb2.locate_topic_rep_t()
         msg.ParseFromString(encoded_msg[1:])
         return msg
-    elif msg_type_uint32 == 113:
+    elif msg_type_uint32 == 85:
         msg = maxwell_protocol_pb2.locate_topic_req_t()
         msg.ParseFromString(encoded_msg[1:])
         return msg
@@ -130,6 +112,22 @@ def decode_msg(encoded_msg):
         msg = maxwell_protocol_pb2.ok_rep_t()
         msg.ParseFromString(encoded_msg[1:])
         return msg
+    elif msg_type_uint32 == 84:
+        msg = maxwell_protocol_pb2.pick_frontends_rep_t()
+        msg.ParseFromString(encoded_msg[1:])
+        return msg
+    elif msg_type_uint32 == 83:
+        msg = maxwell_protocol_pb2.pick_frontends_req_t()
+        msg.ParseFromString(encoded_msg[1:])
+        return msg
+    elif msg_type_uint32 == 82:
+        msg = maxwell_protocol_pb2.pick_frontend_rep_t()
+        msg.ParseFromString(encoded_msg[1:])
+        return msg
+    elif msg_type_uint32 == 81:
+        msg = maxwell_protocol_pb2.pick_frontend_req_t()
+        msg.ParseFromString(encoded_msg[1:])
+        return msg
     elif msg_type_uint32 == 2:
         msg = maxwell_protocol_pb2.ping_rep_t()
         msg.ParseFromString(encoded_msg[1:])
@@ -138,19 +136,19 @@ def decode_msg(encoded_msg):
         msg = maxwell_protocol_pb2.ping_req_t()
         msg.ParseFromString(encoded_msg[1:])
         return msg
-    elif msg_type_uint32 == 6:
+    elif msg_type_uint32 == 36:
         msg = maxwell_protocol_pb2.pull_rep_t()
         msg.ParseFromString(encoded_msg[1:])
         return msg
-    elif msg_type_uint32 == 5:
+    elif msg_type_uint32 == 35:
         msg = maxwell_protocol_pb2.pull_req_t()
         msg.ParseFromString(encoded_msg[1:])
         return msg
-    elif msg_type_uint32 == 4:
+    elif msg_type_uint32 == 34:
         msg = maxwell_protocol_pb2.push_rep_t()
         msg.ParseFromString(encoded_msg[1:])
         return msg
-    elif msg_type_uint32 == 3:
+    elif msg_type_uint32 == 33:
         msg = maxwell_protocol_pb2.push_req_t()
         msg.ParseFromString(encoded_msg[1:])
         return msg
@@ -171,18 +169,18 @@ def decode_msg(encoded_msg):
         msg.ParseFromString(encoded_msg[1:])
         return msg
     elif msg_type_uint32 == 70:
-        msg = maxwell_protocol_pb2.register_server_rep_t()
+        msg = maxwell_protocol_pb2.register_service_rep_t()
         msg.ParseFromString(encoded_msg[1:])
         return msg
     elif msg_type_uint32 == 69:
-        msg = maxwell_protocol_pb2.register_server_req_t()
+        msg = maxwell_protocol_pb2.register_service_req_t()
         msg.ParseFromString(encoded_msg[1:])
         return msg
-    elif msg_type_uint32 == 8:
+    elif msg_type_uint32 == 40:
         msg = maxwell_protocol_pb2.req_rep_t()
         msg.ParseFromString(encoded_msg[1:])
         return msg
-    elif msg_type_uint32 == 7:
+    elif msg_type_uint32 == 39:
         msg = maxwell_protocol_pb2.req_req_t()
         msg.ParseFromString(encoded_msg[1:])
         return msg
@@ -194,16 +192,12 @@ def decode_msg(encoded_msg):
         msg = maxwell_protocol_pb2.resolve_ip_req_t()
         msg.ParseFromString(encoded_msg[1:])
         return msg
-    elif msg_type_uint32 == 100:
-        msg = maxwell_protocol_pb2.route_added_msg_t()
+    elif msg_type_uint32 == 72:
+        msg = maxwell_protocol_pb2.set_routes_rep_t()
         msg.ParseFromString(encoded_msg[1:])
         return msg
-    elif msg_type_uint32 == 101:
-        msg = maxwell_protocol_pb2.route_deleted_msg_t()
-        msg.ParseFromString(encoded_msg[1:])
-        return msg
-    elif msg_type_uint32 == 102:
-        msg = maxwell_protocol_pb2.route_health_changed_msg_t()
+    elif msg_type_uint32 == 71:
+        msg = maxwell_protocol_pb2.set_routes_req_t()
         msg.ParseFromString(encoded_msg[1:])
         return msg
     else:
