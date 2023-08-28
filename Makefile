@@ -42,6 +42,9 @@ test:
 gen:
 	$(prj-dir)/bin/gen_protocol_code.sh
 
+publish:
+	python3 -m build && twine check dist/* && twine upload -r pypi dist/*
+
 publish-test:
 	python3 -m build && twine check dist/* && twine upload -r pypitest dist/*
 
