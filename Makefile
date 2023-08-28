@@ -42,6 +42,9 @@ test:
 gen:
 	$(prj-dir)/bin/gen_protocol_code.sh
 
+publish-test:
+	python3 -m build && twine check dist/* && twine upload -r pypitest dist/*
+
 clean:
 	$(prj-dir)/bin/clean_protocol_code.sh
 	rm -rf $(venv-dir) $(prj-dir)/build $(prj-dir)/dist ${prj-dir}/maxwell_protocol.egg-info
