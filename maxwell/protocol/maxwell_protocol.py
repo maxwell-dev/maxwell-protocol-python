@@ -14,6 +14,14 @@ def encode_msg(msg):
         return (76).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
     elif msg.__class__ == maxwell_protocol_pb2.get_routes_req_t:
         return (75).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
+    elif msg.__class__ == maxwell_protocol_pb2.get_route_dist_checksum_rep_t:
+        return (80).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
+    elif msg.__class__ == maxwell_protocol_pb2.get_route_dist_checksum_req_t:
+        return (79).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
+    elif msg.__class__ == maxwell_protocol_pb2.get_topic_dist_checksum_rep_t:
+        return (78).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
+    elif msg.__class__ == maxwell_protocol_pb2.get_topic_dist_checksum_req_t:
+        return (77).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
     elif msg.__class__ == maxwell_protocol_pb2.locate_topic_rep_t:
         return (86).to_bytes(1, 'little', signed=False) + msg.SerializeToString()
     elif msg.__class__ == maxwell_protocol_pb2.locate_topic_req_t:
@@ -94,6 +102,22 @@ def decode_msg(encoded_msg):
         return msg
     elif msg_type_uint32 == 75:
         msg = maxwell_protocol_pb2.get_routes_req_t()
+        msg.ParseFromString(encoded_msg[1:])
+        return msg
+    elif msg_type_uint32 == 80:
+        msg = maxwell_protocol_pb2.get_route_dist_checksum_rep_t()
+        msg.ParseFromString(encoded_msg[1:])
+        return msg
+    elif msg_type_uint32 == 79:
+        msg = maxwell_protocol_pb2.get_route_dist_checksum_req_t()
+        msg.ParseFromString(encoded_msg[1:])
+        return msg
+    elif msg_type_uint32 == 78:
+        msg = maxwell_protocol_pb2.get_topic_dist_checksum_rep_t()
+        msg.ParseFromString(encoded_msg[1:])
+        return msg
+    elif msg_type_uint32 == 77:
+        msg = maxwell_protocol_pb2.get_topic_dist_checksum_req_t()
         msg.ParseFromString(encoded_msg[1:])
         return msg
     elif msg_type_uint32 == 86:
