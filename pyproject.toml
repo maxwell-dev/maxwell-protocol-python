@@ -9,13 +9,13 @@ classifiers = [
   "License :: OSI Approved :: MIT License",
   "Operating System :: OS Independent",
 ]
-dependencies = ["protobuf == 4.25.3"]
+dependencies = ["protobuf >= 4.25.3"]
 description = "The maxwell protocol implementation for python."
 license = {file = "LICENSE"}
 name = "maxwell-protocol"
 readme = "README.md"
 requires-python = ">=3.7"
-version = "0.7.1"
+version = "0.7.2"
 
 [project.optional-dependencies]
 test = ["pytest >= 8.0.2", "pytest-cov >= 4.1.0"]
