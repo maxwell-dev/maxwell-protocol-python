@@ -4,5 +4,5 @@
 #
 #    pip-compile --strip-extras
 #
-protobuf==5.26.0
+protobuf==5.28.0
     # via maxwell-protocol (setup.py)
