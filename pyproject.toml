@@ -9,7 +9,7 @@ classifiers = [
   "License :: OSI Approved :: MIT License",
   "Operating System :: OS Independent",
 ]
-dependencies = ["protobuf == 5.28.0"]
+dependencies = ["protobuf == 5.29.6"]
 description = "The maxwell protocol implementation for python."
 license = {file = "LICENSE"}
 name = "maxwell-protocol"
